@@ -1,0 +1,45 @@
+<div class="login-page">
+    <form class="login-box">
+        <h1>Login</h1>
+
+        <label>
+            Email
+            <input type="email" required>
+        </label>
+
+        <label>
+            Password
+            <input type="password" required>
+        </label>
+
+        <button type="submit">Sign In</button>
+    </form>
+</div>
+
+
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #eef2f7;
+}
+
+.login-box {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: min(100%, 360px);
+    padding: 24px;
+    background: white;
+    border-radius: 12px;
+}
+
+.login-box input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 4px;
+}

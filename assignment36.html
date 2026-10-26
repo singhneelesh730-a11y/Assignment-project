@@ -1,0 +1,26 @@
+<div class="gallery">
+    <img src="photo1.jpg" alt="Gallery photo 1">
+    <img src="photo2.jpg" alt="Gallery photo 2">
+    <img src="photo3.jpg" alt="Gallery photo 3">
+    <img src="photo4.jpg" alt="Gallery photo 4">
+</div>
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.gallery img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+@media (min-width: 700px) {
+    .gallery {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}

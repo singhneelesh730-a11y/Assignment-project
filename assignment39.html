@@ -1,0 +1,61 @@
+<div class="shop">
+    <header>My Shop</header>
+
+    <aside>
+        Categories
+        <p>Accessories</p>
+        <p>Clothing</p>
+    </aside>
+
+    <main class="products">
+        <article>Product 1</article>
+        <article>Product 2</article>
+        <article>Product 3</article>
+    </main>
+</div>
+
+
+.shop {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas:
+        "header header"
+        "sidebar products";
+    gap: 16px;
+}
+
+.shop header {
+    grid-area: header;
+    padding: 20px;
+    background: #1d3557;
+    color: white;
+}
+
+.shop aside {
+    grid-area: sidebar;
+    padding: 16px;
+    background: #f1f4f8;
+}
+
+.products {
+    grid-area: products;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+}
+
+.products article {
+    padding: 24px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+    .shop {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "products";
+    }
+}

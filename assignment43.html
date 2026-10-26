@@ -1,0 +1,73 @@
+<header class="topbar">
+    <strong>Brand</strong>
+
+    <nav>
+        <a href="#features">Features</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<main class="layout">
+    <section class="hero">
+        <div>
+            <h1>Learn and Build</h1>
+            <p>Create projects with HTML and CSS.</p>
+            <a href="#features">Get Started</a>
+        </div>
+
+        <div class="visual">Your Project</div>
+    </section>
+
+    <section id="features" class="features">
+        <article>Feature One</article>
+        <article>Feature Two</article>
+        <article>Feature Three</article>
+    </section>
+</main>
+
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+}
+
+.topbar nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.layout {
+    width: min(1100px, 100% - 32px);
+    margin: auto;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    gap: 24px;
+    padding: 48px 0;
+}
+
+.visual,
+.features article {
+    padding: 24px;
+    background: #eef4ff;
+    border-radius: 12px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+}
+
+@media (max-width: 650px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+}
